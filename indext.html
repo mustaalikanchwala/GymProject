@@ -69,49 +69,73 @@
 
     <!-- Sections -->
     <section id="home" class="section">
-        <div class="quote" id="quote">"Push yourself, because no one else is going to do it for you."</div>
-        <img src="home-gym.jpg" alt="Gym Facility" class="home-image">
-        <div class="social-links">
-            <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
-            <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
-            <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+        <div class="home-content">
+            <div class="home-text animate">
+                <h1>Welcome to Your Gym</h1>
+                <div class="quote" id="quote">"Push yourself, because no one else is going to do it for you."</div>
+                <a href="#membership" class="cta-button">Join Now</a>
+            </div>
+            <img src="home-gym.jpg" alt="Gym Facility" class="home-image animate">
+            <div class="social-links animate">
+                <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+                <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+            </div>
         </div>
     </section>
 
     <section id="about" class="section">
         <div class="about-content">
-            <div class="about-text">
+            <div class="about-text animate">
                 <h2>About Our Gym</h2>
                 <p>Welcome to our gym, where fitness meets passion. We offer state-of-the-art equipment, expert trainers, and a supportive community to help you achieve your fitness goals.</p>
             </div>
-            <div class="slider">
+            <div class="slider animate">
                 <img src="gym-image1.jpg" alt="Gym Image 1" class="slide active">
                 <img src="gym-image2.jpg" alt="Gym Image 2" class="slide">
             </div>
         </div>
     </section>
 
-    <section id="trainers" class="section">
-        <h2>Our Trainers</h2>
-        <div class="trainer-cards">
-            <div class="card">
-                <img src="trainer1.jpg" alt="Trainer 1">
-                <h3>John Doe</h3>
-                <p>Certified Personal Trainer</p>
-                <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
-            </div>
+   <section id="trainers" class="section">
+    <h2 class="animate">Our Trainers</h2>
+    <div class="trainer-cards">
+        <div class="card animate">
+            <img src="trainer1.jpg" alt="Trainer 1">
+            <h3>John Doe</h3>
+            <p>Certified Personal Trainer</p>
+            <p class="trainer-bio">Specializes in strength training and nutrition planning with 10+ years of experience.</p>
+            <a href="#contact" class="book-button">Book a Session</a>
+            <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
         </div>
-    </section>
+        <div class="card animate">
+            <img src="trainer2.jpg" alt="Trainer 2">
+            <h3>Jane Smith</h3>
+            <p>Yoga & Mobility Expert</p>
+            <p class="trainer-bio">Certified yoga instructor with a focus on flexibility and mindfulness.</p>
+            <a href="#contact" class="book-button">Book a Session</a>
+            <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+        </div>
+        <div class="card animate">
+            <img src="trainer3.jpg" alt="Trainer 3">
+            <h3>Mike Johnson</h3>
+            <p>Cardio & HIIT Coach</p>
+            <p class="trainer-bio">Expert in high-intensity interval training and endurance coaching.</p>
+            <a href="#contact" class="book-button">Book a Session</a>
+            <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+        </div>
+    </div>
+</section>
 
     <section id="yoga" class="section">
-        <h2>Yoga Classes</h2>
+        <h2 class="animate">Yoga Classes</h2>
         <div class="yoga-cards">
-            <div class="card">
+            <div class="card animate">
                 <h3>Monday - Hatha Yoga</h3>
                 <p>Time: 6:00 AM - 7:00 AM</p>
                 <p>Asanas: Suryanamaskar, Tadasana, Vrikshasana</p>
             </div>
-            <div class="card">
+            <div class="card animate">
                 <h3>Wednesday - Vinyasa Yoga</h3>
                 <p>Time: 7:00 PM - 8:00 PM</p>
                 <p>Asanas: Downward Dog, Warrior II, Chaturanga</p>
@@ -119,25 +143,43 @@
         </div>
     </section>
 
-    <section id="membership" class="section">
-        <h2>Membership Plans</h2>
-        <div class="membership-cards">
-            <div class="card">
-                <h3>Monthly Plan</h3>
-                <h2>₹2000</h2>
-                <p>Access to all gym facilities.</p>
-            </div>
-            <div class="card">
-                <h3>3 Months Plan</h3>
-                <h2>₹5500</h2>
-                <p>Includes personal training session.</p>
-            </div>
+  <section id="membership" class="section">
+    <h2 class="animate">Membership Plans</h2>
+    <div class="membership-calculator animate">
+        <h3>Calculate Your Membership</h3>
+        <div class="calculator-form">
+            <select id="planSelect">
+                <option value="2000">Monthly Plan - ₹2000</option>
+                <option value="5500">3 Months Plan - ₹5500</option>
+                <option value="10000">6 Months Plan - ₹10000</option>
+            </select>
+            <label><input type="checkbox" id="personalTraining"> Add Personal Training (₹1000/month)</label>
+            <p>Total: <span id="totalCost">₹2000</span></p>
+            <a href="#contact" class="cta-button">Sign Up Now</a>
         </div>
-    </section>
+    </div>
+    <div class="membership-cards">
+        <div class="card animate">
+            <h3>Monthly Plan</h3>
+            <h2>₹2000</h2>
+            <p>Access to all gym facilities.</p>
+        </div>
+        <div class="card animate">
+            <h3>3 Months Plan</h3>
+            <h2>₹5500</h2>
+            <p>Includes personal training session.</p>
+        </div>
+        <div class="card animate">
+            <h3>6 Months Plan</h3>
+            <h2>₹10000</h2>
+            <p>Full access with 2 personal training sessions.</p>
+        </div>
+    </div>
+</section>
 
     <section id="announcements" class="section">
-        <h2>Announcements</h2>
-        <div class="announcement-container">
+        <h2 class="animate">Announcements</h2>
+        <div class="announcement-container animate">
             <div class="announcement">
                 <span class="announcement-text">Gym maintenance on June 10, 2025.</span>
                 <span class="announcement-date">June 3, 2025, 10:00 AM</span>
@@ -146,13 +188,13 @@
     </section>
 
     <section id="location" class="section">
-        <h2>Our Location</h2>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.019177141!2d144.9537353153167!3d-37.81621897975171!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzfCsDQ5JzA1LjQiUyAxNDTCsDU3JzEzLjUiRQ!5e0!3m2!1sen!2sau!4v1622559876543" allowfullscreen="" loading="lazy"></iframe>
+        <h2 class="animate">Our Location</h2>
+        <iframe class="animate" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.019177141!2d144.9537353153167!3d-37.81621897975171!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzfCsDQ5JzA1LjQiUyAxNDTCsDU3JzEzLjUiRQ!5e0!3m2!1sen!2sau!4v1622559876543" allowfullscreen="" loading="lazy"></iframe>
     </section>
 
     <section id="contact" class="section">
-        <h2>Contact Us</h2>
-        <form id="contactForm">
+        <h2 class="animate">Contact Us</h2>
+        <form id="contactForm" class="animate">
             <input type="text" placeholder="Full Name" required>
             <input type="email" placeholder="Email" required>
             <input type="tel" placeholder="Phone Number" required>
@@ -162,24 +204,42 @@
     </section>
 
     <section id="feedback" class="section">
-        <h2>Feedback</h2>
-        <form id="feedbackForm">
+        <h2 class="animate">Feedback</h2>
+        <form id="feedbackForm" class="animate">
             <input type="text" placeholder="Full Name" required>
             <textarea placeholder="Your Feedback" required></textarea>
             <button type="submit">Submit</button>
         </form>
     </section>
 
+    <section id="testimonials" class="section">
+    <h2 class="animate">What Our Members Say</h2>
+    <div class="testimonial-carousel animate">
+        <div class="testimonial active">
+            <p>"This gym transformed my fitness journey! The trainers are amazing and the community is so supportive."</p>
+            <h4>– Sarah P.</h4>
+        </div>
+        <div class="testimonial">
+            <p>"The yoga classes here are a game-changer. I feel stronger and more balanced every week."</p>
+            <h4>– Amit K.</h4>
+        </div>
+        <div class="testimonial">
+            <p>"Best decision I made was joining this gym. The facilities are top-notch!"</p>
+            <h4>– Priya M.</h4>
+        </div>
+    </div>
+</section>
+
     <!-- Footer -->
     <footer class="footer">
         <div class="footer-content">
-            <div class="footer-address">
+            <div class="footer-address animate">
                 <h3>Our Address</h3>
                 <p>123 Fitness Lane, Wellness City, India</p>
                 <p>Email: contact@yourgym.com</p>
                 <p>Phone: +91 123-456-7890</p>
             </div>
-            <div class="footer-social">
+            <div class="footer-social animate">
                 <h3>Follow Us</h3>
                 <div class="social-links">
                     <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
@@ -187,7 +247,7 @@
                     <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
                 </div>
             </div>
-            <div class="footer-nav">
+            <div class="footer-nav animate">
                 <h3>Quick Links</h3>
                 <ul>
                     <li><a href="#home">Home</a></li>
@@ -201,12 +261,27 @@
                     <li><a href="#feedback">Feedback</a></li>
                 </ul>
             </div>
+            <div class="footer-newsletter animate">
+    <h3>Stay Updated</h3>
+    <p>Subscribe to our newsletter for the latest gym updates and offers.</p>
+    <form id="newsletterForm" class="newsletter-form">
+        <input type="email" placeholder="Enter your email" required>
+        <button type="submit">Subscribe</button>
+    </form>
+    <p id="newsletterMessage" class="newsletter-message"></p>
+</div>
+<div class="footer-content">
+        <div class="footer-address animate">...</div>
+        <div class="footer-social animate">...</div>
+        <div class="footer-nav animate">...</div>
+        <div class="footer-newsletter animate">...</div> <!-- Add here -->
+    </div>
         </div>
     </footer>
 
     <!-- Copyright -->
     <div class="copyright">
-        <p>&copy; 2025 Your Gym Name. All rights reserved.</p>
+        <p>© 2025 Your Gym Name. All rights reserved.</p>
     </div>
 
     <script src="script.js"></script>
