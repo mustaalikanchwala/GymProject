@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const loginPopup = document.getElementById('loginPopup');
     const closePopup = document.getElementById('closePopup');
     loginPopup.style.display = 'flex';
-    
+
     closePopup.addEventListener('click', () => {
         loginPopup.style.display = 'none';
     });
@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const menuBtn = document.getElementById('menuBtn');
     const sidebar = document.getElementById('sidebar');
     const closeSidebar = document.getElementById('closeSidebar');
-    
+
     menuBtn.addEventListener('click', () => {
         sidebar.classList.add('active');
     });
@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Smooth Scroll
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
+        anchor.addEventListener('click', function (e) {
             e.preventDefault();
             const targetId = this.getAttribute('href').substring(1);
             const targetSection = document.getElementById(targetId);
@@ -86,7 +86,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Slider
     const slides = document.querySelectorAll('.slide');
     let slideIndex = 0;
-    
+
     function showSlide(index) {
         slides.forEach((slide, i) => {
             slide.classList.toggle('active', i === index);
@@ -99,58 +99,34 @@ document.addEventListener('DOMContentLoaded', () => {
     }, 3000);
 
     // Membership Calculator
-const planSelect = document.getElementById('planSelect');
-const personalTraining = document.getElementById('personalTraining');
-const totalCost = document.getElementById('totalCost');
+    const planSelect = document.getElementById('planSelect');
+    const personalTraining = document.getElementById('personalTraining');
+    const totalCost = document.getElementById('totalCost');
 
-function calculateTotal() {
-    let baseCost = parseInt(planSelect.value);
-    const months = planSelect.value === '2000' ? 1 : planSelect.value === '5500' ? 3 : 6;
-    if (personalTraining.checked) {
-        baseCost += 1000 * months;
+    function calculateTotal() {
+        let baseCost = parseInt(planSelect.value);
+        const months = planSelect.value === '2000' ? 1 : planSelect.value === '5500' ? 3 : 6;
+        if (personalTraining.checked) {
+            baseCost += 1000 * months;
+        }
+        totalCost.textContent = `₹${baseCost}`;
     }
-    totalCost.textContent = `₹${baseCost}`;
-}
 
-planSelect.addEventListener('change', calculateTotal);
-personalTraining.addEventListener('change', calculateTotal);
+    planSelect.addEventListener('change', calculateTotal);
+    personalTraining.addEventListener('change', calculateTotal);
 
-// Testimonial Carousel
-const testimonials = document.querySelectorAll('.testimonial');
-let testimonialIndex = 0;
+    // Testimonial Carousel
+    const testimonials = document.querySelectorAll('.testimonial');
+    let testimonialIndex = 0;
 
-function showTestimonial(index) {
-    testimonials.forEach((testimonial, i) => {
-        testimonial.classList.toggle('active', i === index);
-    });
-}
-
-setInterval(() => {
-    testimonialIndex = (testimonialIndex + 1) % testimonials.length;
-    showTestimonial(testimonialIndex);
-}, 5000);
-// Newsletter Form Validation
-const newsletterForm = document.getElementById('newsletterForm');
-const newsletterMessage = document.getElementById('newsletterMessage');
-
-newsletterForm.addEventListener('submit', (e) => {
-    e.preventDefault();
-    const emailInput = newsletterForm.querySelector('input[type="email"]');
-    const email = emailInput.value.trim();
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-    if (emailRegex.test(email)) {
-        newsletterMessage.textContent = 'Thank you for subscribing!';
-        newsletterMessage.style.color = '#4CAF50';
-        body.classList.contains('dark-mode') ? newsletterMessage.style.color = '#4ADE80' : null;
-        newsletterForm.reset();
-        setTimeout(() => {
-            newsletterMessage.textContent = '';
-        }, 3000);
-    } else {
-        newsletterMessage.textContent = 'Please enter a valid email address.';
-        newsletterMessage.style.color = '#FF6B00';
-        body.classList.contains('dark-mode') ? newsletterMessage.style.color = '#FF7A1A' : null;
+    function showTestimonial(index) {
+        testimonials.forEach((testimonial, i) => {
+            testimonial.classList.toggle('active', i === index);
+        });
     }
-});
+
+    setInterval(() => {
+        testimonialIndex = (testimonialIndex + 1) % testimonials.length;
+        showTestimonial(testimonialIndex);
+    }, 5000);
 });
